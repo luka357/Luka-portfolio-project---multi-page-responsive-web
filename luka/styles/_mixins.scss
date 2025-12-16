@@ -1,0 +1,14 @@
+@mixin grid-container($column-count, $row-count, $gap) {
+  display: grid;
+  grid-template-columns: repeat($column-count, auto);
+  grid-template-rows: repeat($row-count, auto);
+  gap: $gap;
+}
+
+@mixin flex-container($justify, $align, $gap, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-direction: $direction;
+}
