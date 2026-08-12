@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'watches',
     'corsheaders',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +105,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
 }
 
 SIMPLE_JWT = {
@@ -111,7 +115,4 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7)
 }
 
-CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:5500',
-    'http://localhost:5500',
-]
+CORS_ALLOW_ALL_ORIGINS = True

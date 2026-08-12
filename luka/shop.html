@@ -26,8 +26,6 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-
-  <script src="./shop.js"></script>
   
   <body>
     <header>
@@ -66,7 +64,7 @@
               <a class="nav-link" href="./contact.html">CONTACT</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link with-border"
+              <a href="./login.html" id="auth-link" class="nav-link with-border"
                 ><div class="icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,8 +81,7 @@
                     />
                   </svg>
                 </div>
-                <span>Log In</span></a
-              >
+                <span>Log In</span></a>
             </li>
             <li class="nav-item">
 
@@ -116,136 +113,26 @@
     </header>
 
     <main class="shop-main">
-      <p class="shop">SHOP</p>
-
-      <section class="cards">
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_9ef56661e3354b10821ac0d339bef2a4.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_9ef56661e3354b10821ac0d339bef2a4.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>I'm a Product</h6>
-            <p><span>$79.00</span> $59.25</p>
-          </div>
+    <div class="shop-header">
+        <p class="shop">SHOP</p>
+        <div class="sort-container">
+            <select id="sort-select" onchange="loadWatches()">
+                <option value="">Sort By</option>
+                <option value="price">Price: Low to High</option>
+                <option value="-price">Price: High to Low</option>
+                <option value="name">Name: A-Z</option>
+            </select>
+            <select id="category-select" onchange="loadWatches()">
+              <option value="">All Categories</option>
+              <option value="1">Leather</option>
+              <option value="2">Metal</option>
+            </select>
         </div>
+    </div>
 
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_4f89ba04c5d6495c9699ede2a992e276.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_4f89ba04c5d6495c9699ede2a992e276.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>GENTS</h6>
-            <p>$89.00</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_14fdf403ceef4f678368fdc3ee455fdf.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_14fdf403ceef4f678368fdc3ee455fdf.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>BLACK JET</h6>
-            <p>$79.00</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_589e26ff417b40edb2fb772b7cb96fe1.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_589e26ff417b40edb2fb772b7cb96fe1.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>I'm a Product</h6>
-            <p>$89.00</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_85212c6b6d9145d2b22c20865fe7c00e.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_85212c6b6d9145d2b22c20865fe7c00e.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>I'm a Product</h6>
-            <p>$89.00</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_e89951f99c7443d9ba138aef21663e22.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_e89951f99c7443d9ba138aef21663e22.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>APOLLO</h6>
-            <p>$59.00</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_d3a1874bd67f42199ed0a997d4fae279.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_d3a1874bd67f42199ed0a997d4fae279.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>I'm a Product</h6>
-            <p>$99.00</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_7dce82cc188848a09707966954bd73eb.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_7dce82cc188848a09707966954bd73eb.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>XTIME SPORT</h6>
-            <p>$79.00</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="image">
-            <img
-              src="https://static.wixstatic.com/media/a9ff3b_55dc9c19583a4bc7876eac612b016d2d.jpg/v1/fill/w_200,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9ff3b_55dc9c19583a4bc7876eac612b016d2d.jpg"
-              alt="Not Found"
-            />
-          </div>
-
-          <div class="info">
-            <h6>I'm a Product</h6>
-            <p>$99.00</p>
-          </div>
-        </div>
-      </section>
-    </main>
+    <section class="cards">
+    </section>
+</main>
 
     <footer>
       <p>
@@ -341,4 +228,5 @@
       crossorigin="anonymous"
     ></script>
   </body>
+  <script src="js/shop.js"></script>
 </html>
