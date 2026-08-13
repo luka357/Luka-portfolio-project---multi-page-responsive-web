@@ -1,5 +1,11 @@
 from rest_framework import serializers
 from .models import Watch, Category
+from .models import Watch, Category, ContactMessage
+
+class ContactMessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ContactMessage
+        fields = ['id', 'first_name', 'last_name', 'email', 'subject', 'message']
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
